@@ -1,0 +1,59 @@
+var circlex = 0
+var col ={
+  r:0,
+  g:0,
+  b:255,
+
+}
+
+function setup() {
+  createCanvas(400, 400);
+   
+}
+
+function draw() {
+  background(240);
+  noStroke();
+  
+  col.r=random(10,255);
+  col.g=random(0);
+  col.b=random(10,220); 
+  
+  
+  fill(col.r,col.g,col.b);//Red
+  rect(circlex,0,180,170);//Red rectangle
+	
+	fill(col.r,235,0);//yellow
+  rect(circlex,240,50,180);//yellow rect
+  
+  fill(col.r,col.g,200);//blue
+  rect(180,circlex,130,130);//blue rect
+  
+  stroke(0)
+	
+	strokeWeight(7);
+	line(180,0,180,400);//middle
+	
+	strokeWeight(10);
+	line(0,240,400,240);//lower
+  
+  strokeWeight(10);
+	line(0,170,400,170);//upper
+  strokeCap(SQUARE)
+  
+  strokeWeight(7);//yellow
+	line(50,240,50,400);
+  strokeCap(SQUARE)
+  
+  strokeWeight(7);//blue v
+	line(310,240,310,400);
+  
+  strokeWeight(7);//blue h
+	line(180,370,310,370);
+  
+  circlex= circlex+2;
+  
+}
+  
+  
+  
