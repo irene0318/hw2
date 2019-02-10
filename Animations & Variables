@@ -1,0 +1,134 @@
+function setup() {
+  createCanvas(400, 400);
+}
+
+var ball=0;
+var ballspeed=10;
+var ballchangeX=ballspeed;
+
+var ball2=0;
+var ballspeed2=5;
+var ballchangeX2=ballspeed2;
+
+var ball3=0;
+var ballspeed3=2;
+var ballchangeX3=ballspeed3;
+
+var ball4=0;
+var ballspeed4=4;
+var ballchangeX4=ballspeed4;
+
+var ball5=0;
+var ballspeed5=2;
+var ballchangeX5=ballspeed5;
+
+var ball6=0;
+var ballspeed6=4;
+var ballchangeX6=ballspeed6;
+
+var col ={
+  r:0,
+  g:0,
+  b:255,
+}
+
+function draw() {
+  background(220);
+  col.r=random(10,255);
+  col.g=random(0);
+  col.b=random(10,220); 
+  
+  fill(col.r,col.g,col.b);
+  ellipse(height/2,ball,100);
+  fill(10,230,150);
+  ellipse(height/6,ball2,75);
+  fill(200,30,150);
+  ellipse(height/8,ball3,50);
+  fill(200,50,20);
+  ellipse(height-50,ball4,80);
+  fill(200,30,200);
+  ellipse(ball5,height/2,100);
+  fill(20,80,200);
+  ellipse(ball6,height/4,100);
+  fill(20,80,230);
+  ball=ball+ballchangeX;
+  ball2=ball2+ballchangeX2;
+  ball3=ball3+ballchangeX3;
+  ball4=ball4+ballchangeX4;
+  ball5=ball5+ballchangeX5;
+  ball6=ball6+ballchangeX6;
+  
+  
+  
+  //up
+  if(ball>=height){
+    //ball=0;
+    ballchangeX= -ballspeed 
+  }
+  //down
+  if(ball<=0){
+    ballchangeX= ballspeed 
+  if(ball<=0) { fill(col.r,col.g,col.b) 
+  }
+
+  
+  
+  //up
+  if(ball2>=height){
+//    ball=0;
+    ballchangeX2=-ballspeed2;
+  }
+  //down
+  if(ball2<=0){
+    ballchangeX2=ballspeed2}
+
+  }
+    
+    
+    //up
+  if(ball3>=height){
+//    ball=0;
+    ballchangeX3=-ballspeed3;
+  }
+  //down
+  if(ball3<=0){
+    ballchangeX3=ballspeed3;
+  }
+    
+  
+  
+   //up
+  if(ball4>=height){
+    //ball=0;
+    ballchangeX4= -ballspeed4;
+  }
+  //down
+  if(ball4<=0){
+    ballchangeX4= ballspeed4;
+  }
+
+ 
+    //up
+  if(ball5>=height){
+
+    ballchangeX5= -ballspeed5 ;
+  }
+  //down
+  if(ball5<=0){
+    ballchangeX5= ballspeed5;
+  }
+
+    
+  
+    //up
+  if(ball6>=width){
+    //ball=0;
+    ballchangeX6= -ballspeed6;
+  }
+  //down
+  if(ball6<=0){
+    ballchangeX6= ballspeed6;
+  }
+
+
+}
